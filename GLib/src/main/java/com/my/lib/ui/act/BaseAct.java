@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -14,18 +16,13 @@ import org.jetbrains.annotations.Nullable;
  * base activity
  */
 public abstract class BaseAct extends Activity implements View.OnClickListener {
-
-    //log tag
-    protected final String TAG = this.getClass().getSimpleName();
     /**
-     * 当前Activity渲染的视图View
-     **/
-    private View mContextView = null;
-
-    /**
-     * [初始化参数]
+     * Log Tag
      */
-    public abstract void initPrams(Bundle prams);
+    protected final String TAG = this.getClass().getSimpleName();
+
+    public LinearLayout baseLayout;
+    public View mContextView;
 
     /**
      * [绑定布局]
@@ -35,7 +32,14 @@ public abstract class BaseAct extends Activity implements View.OnClickListener {
     /**
      * [绑定视图]
      */
-    public abstract View bindView();
+    public View bindView() {
+        return null;
+    }
+
+    /**
+     * [初始化参数]
+     */
+    public abstract void initPrams(Bundle prams);
 
     /**
      * [初始化控件]
@@ -45,6 +49,7 @@ public abstract class BaseAct extends Activity implements View.OnClickListener {
     /**
      * [绑定控件]
      */
+    @SuppressWarnings("unchecked")
     protected <T extends View> T $(int resId) {
         return (T) super.findViewById(resId);
     }
@@ -55,15 +60,15 @@ public abstract class BaseAct extends Activity implements View.OnClickListener {
     public abstract void setListener();
 
     /**
-     * [业务操作]
-     */
-    public abstract void doBusiness(Context mContext);
-
-    /**
-     * 数据初始化
-     * 界面默认显示数据
+     * [数据初始化]
      */
     public abstract void initData();
+
+
+    /**
+     * [业务操作]
+     */
+    public abstract void doBusiness(Context mContext, Bundle savedInstanceState);
 
     /**
      * [VIEW点击]
@@ -74,6 +79,7 @@ public abstract class BaseAct extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         widgetClick(v);
     }
+
 
     /**
      * [页面跳转]
@@ -106,6 +112,20 @@ public abstract class BaseAct extends Activity implements View.OnClickListener {
         startActivityForResult(intent, requestCode);
     }
 
+    /**
+     * 页面结构
+     */
+    private void initBaseView() {
+        baseLayout = new LinearLayout(this);
+        baseLayout.setOrientation(LinearLayout.VERTICAL);
+
+        baseLayout.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT));
+
+        mContextView.setLayoutParams(new LinearLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+
+        baseLayout.addView(mContextView);
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,11 +139,15 @@ public abstract class BaseAct extends Activity implements View.OnClickListener {
         } else {
             mContextView = mView;
         }
-        setContentView(mContextView);
 
-        initView(mContextView);
+        initBaseView();
+        setContentView(baseLayout);
+
+        initView(baseLayout);
         setListener();
         initData();
-        doBusiness(this);
+        doBusiness(this, savedInstanceState);
     }
+
+
 }

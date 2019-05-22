@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#4077F1</color>
+    <color name="colorPrimaryDark">#0000CD</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <color name="statusBarColorDark">#FFFFFF</color>
+    <color name="statusBarColor">#FFFFFF</color>
+    <color name="statusBarColorLight">#FFFFFF</color>
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="color_orange">#FA821D</color>
+
+    <!-- text color -->
+    <color name="text_color_9">#999999</color>
+    <color name="text_color_6">#666666</color>
+    <color name="text_color_46">#464646</color>
+    <color name="text_color_80">#808080</color>
+    <color name="text_color_3">#333333</color>
+    <color name="text_color_c">#C1C1C1</color>
+    <color name="text_color_cc">#CCCCCC</color>
+
+    <color name="text_color_red">#c9191d</color>
+    <color name="text_color_blue">#00B2FF</color>
+    <color name="text_color_green">#52C243</color>
+
+    <color name="main_color">#c1976d</color>
+
+    <!-- button -->
+    <color name="btn_blue_pressed">#6699FF</color>
+    <color name="btn_blue_normal">#00B2FF</color>
+
+    <!-- 背景 -->
+    <color name="color_bg">#EDEDED</color>
+    <color name="color_bg_blue">#273160</color>
+    <color name="color_bg_fa">#FAFAFA</color>
+
+    <!-- 分割线 -->
+    <color name="line_color_item_side_divider">#E5E5E5</color>
+</resources>

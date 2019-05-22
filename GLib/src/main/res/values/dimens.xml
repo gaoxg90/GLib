@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- margin 为5dp 倍数 -->
+    <dimen name="margin_1">5dp</dimen>
+    <dimen name="margin_2">10dp</dimen>
+    <dimen name="margin_3">15dp</dimen>
+    <dimen name="margin_4">20dp</dimen>
+    <dimen name="margin_5">25dp</dimen>
+    <dimen name="margin_6">30dp</dimen>
+    <dimen name="margin_7">35dp</dimen>
+    <dimen name="margin_8">40dp</dimen>
+
+    <!-- 文字size -->
+    <dimen name="text_size_title">16sp</dimen>
+    <dimen name="text_size_content">14sp</dimen>
+    <dimen name="text_size_button">18sp</dimen>
+
+    <dimen name="text_size_text_20">20sp</dimen>
+    <dimen name="text_size_text_19">19sp</dimen>
+    <dimen name="text_size_text_21">21sp</dimen>
+    <dimen name="text_size_text_22">22sp</dimen>
+    <dimen name="text_size_text_18">18sp</dimen>
+    <dimen name="text_size_text_17">17sp</dimen>
+    <dimen name="text_size_text_16">16sp</dimen>
+    <dimen name="text_size_text_15">15sp</dimen>
+    <dimen name="text_size_text_14">14sp</dimen>
+    <dimen name="text_size_text_13">13sp</dimen>
+    <dimen name="text_size_text_12">12sp</dimen>
+    <dimen name="text_size_text_11">11sp</dimen>
+    <dimen name="text_size_text_10">10sp</dimen>
+
+    <!-- 间隔线 -->
+    <dimen name="divider_height">0.5dp</dimen>
+
+    <dimen name="btn_height">42dp</dimen>
+    <dimen name="title_height">48dp</dimen>
+    <dimen name="item_height">50dp</dimen>
+
+
+</resources>

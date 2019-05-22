@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp">
+
+    <TextView
+        android:id="@+id/title_bg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white" />
+
+    <!-- 左侧 -->
+    <LinearLayout
+        android:id="@+id/title_left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:minWidth="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_3"
+        android:paddingRight="@dimen/margin_4">
+
+        <ImageView
+            android:id="@+id/title_left_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/title_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_1"
+            android:ellipsize="end"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:textColor="@color/color_white" />
+
+    </LinearLayout>
+
+
+    <!-- 右侧 -->
+    <RelativeLayout
+        android:id="@+id/title_right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:minWidth="40dp"
+        android:paddingLeft="@dimen/margin_2"
+        android:paddingRight="@dimen/margin_3">
+
+        <TextView
+            android:id="@+id/title_right_text"
+            style="@style/AppTextView"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/text_size_text_14" />
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/title_right_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/title_right_red"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_above="@+id/title_right_image"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginBottom="-5dp"
+                android:layout_toRightOf="@id/title_right_image"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/title_right_layout_02"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/title_right_layout"
+        android:gravity="center_vertical"
+        android:minWidth="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_4"
+        android:paddingRight="@dimen/margin_4">
+
+        <ImageView
+            android:id="@+id/title_right_image_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/title_right_text_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_1"
+            android:ellipsize="end"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:textColor="@color/color_white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_content"
+        style="@style/AppTextView"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/text_color_3"
+        android:textSize="@dimen/text_size_text_18" />
+
+    <TextView
+        style="@style/AppLineH"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
